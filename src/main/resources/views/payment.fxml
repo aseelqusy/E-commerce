@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.ecommerce.controllers.PaymentController"
+            prefWidth="1200" prefHeight="800"
+            stylesheets="@../styles/payment.css">
+
+    <!-- 🔝 Navbar -->
+    <top>
+        <HBox spacing="30" alignment="CENTER_LEFT" styleClass="navbar">
+            <Label text="cyber" styleClass="logo" />
+
+            <Region HBox.hgrow="ALWAYS" />
+            <HBox spacing="15" alignment="CENTER">
+                <Hyperlink text="Home" onAction="#goToHome"/>
+                <Hyperlink text="Products" onAction="#goToProducts"/>
+                <Button text="❤" styleClass="icon-btn" />
+                <Button text="🛒" styleClass="icon-btn" onAction="#goToCart" />
+                <MenuButton fx:id="profileMenu" text="👤 Waleed" styleClass="profile-menu">
+                    <items>
+                        <MenuItem text="My Profile" />
+                        <MenuItem text="Settings" />
+                        <MenuItem text="Log Out" onAction="#handleLogout" />
+                    </items>
+                </MenuButton>
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- 💳 Payment Form -->
+    <center>
+        <VBox spacing="20" alignment="CENTER" styleClass="payment-container">
+            <Label text="Payment Details" styleClass="section-title" />
+
+            <VBox spacing="15" alignment="CENTER_LEFT" maxWidth="400" styleClass="payment-form">
+                <TextField fx:id="cardNameField" promptText="Cardholder Name" />
+                <TextField fx:id="cardNumberField" promptText="Card Number" />
+                <HBox spacing="10">
+                    <TextField fx:id="expiryField" promptText="MM/YY" />
+                    <TextField fx:id="cvvField" promptText="CVV" />
+                </HBox>
+                <TextField fx:id="billingAddressField" promptText="Billing Address" />
+            </VBox>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="← Back" onAction="#goToShipping" styleClass="form-btn" />
+                <Button text="Pay Now →"  onAction="#pay" fx:id="payBtn" styleClass="checkout-btn" />
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.ecommerce.controllers.LoginController"
+            prefWidth="1280" prefHeight="720"
+            stylesheets="@/styles/login.css">
+
+    <left>
+        <StackPane maxWidth="640" styleClass="login-left">
+            <VBox alignment="CENTER" spacing="15" maxWidth="350">
+                <Label text="Welcome back !!!" styleClass="welcome-label"/>
+                <Label text="Sign in" styleClass="title" />
+                <TextField fx:id="emailField" promptText="Email" styleClass="input-field"/>
+                <PasswordField fx:id="passwordField" promptText="Password" styleClass="input-field"/>
+                <HBox spacing="10" alignment="CENTER_RIGHT">
+                    <Hyperlink text="Forgot Password?" onAction="#forgotPass" />
+                </HBox>
+                <Button text="SIGN IN →" onAction="#handleLogin" styleClass="login-button" />
+                <Hyperlink text="I don’t have an account? Sign up" onAction="#goToSignup"/>
+            </VBox>
+        </StackPane>
+    </left>
+
+    <right>
+        <ImageView fx:id="decorativeImage"
+                   fitHeight="720"
+                   fitWidth="640"
+                   preserveRatio="true"/>
+    </right>
+</BorderPane>

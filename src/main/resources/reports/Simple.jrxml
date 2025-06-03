@@ -1,0 +1,140 @@
+<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
+<jasperReport name="Simple" language="java" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="684db8f2-2f0f-4e28-8237-b601d2b99979">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="cHJvZHVjdHMgLDE1LDE1LDc4YmFiY2ExLTM3NGYtNDliZS1iYWVmLTM2MjAwMzUwMWYzNzs="/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<query language="SQL"><![CDATA[SELECT
+    category,
+    COUNT(*) AS total_products,
+   
+    AVG(price) AS average_price,
+    MAX(price) AS max_price,
+    MIN(price) AS min_price
+FROM products
+GROUP BY category
+ORDER BY total_products DESC
+
+
+]]></query>
+	<field name="category" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="category"/>
+		<property name="com.jaspersoft.studio.field.label" value="category"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="products"/>
+	</field>
+	<field name="total_products" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="total_products"/>
+		<property name="com.jaspersoft.studio.field.label" value="total_products"/>
+	</field>
+	<field name="average_price" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="average_price"/>
+		<property name="com.jaspersoft.studio.field.label" value="average_price"/>
+	</field>
+	<field name="max_price" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="max_price"/>
+		<property name="com.jaspersoft.studio.field.label" value="max_price"/>
+	</field>
+	<field name="min_price" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="min_price"/>
+		<property name="com.jaspersoft.studio.field.label" value="min_price"/>
+	</field>
+	<group name="Group1">
+		<expression><![CDATA[$F{category}]]></expression>
+		<groupHeader>
+			<band height="33">
+				<element kind="staticText" uuid="7d4a9b8a-9233-4aa4-9785-1a75aa0ee1be" mode="Opaque" x="0" y="0" width="100" height="32" forecolor="#666666" backcolor="#E6E6E6" fontSize="12.0">
+					<text><![CDATA[category]]></text>
+				</element>
+				<element kind="textField" uuid="cd44c6f2-ca29-4f47-aff9-5222667cad45" mode="Opaque" x="100" y="0" width="455" height="32" forecolor="#006699" backcolor="#E6E6E6" fontSize="24.0" bold="true">
+					<expression><![CDATA[$F{category}]]></expression>
+				</element>
+				<element kind="line" uuid="03ed1b2c-e2d6-4746-ab83-91f1d32c7ea1" x="-20" y="32" width="595" height="1" forecolor="#666666"/>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<expression><![CDATA[$F{total_products}]]></expression>
+		<groupHeader>
+			<band height="32">
+				<element kind="textField" uuid="4377b1fc-99cd-4064-b64a-0d31c55e10e6" x="100" y="0" width="455" height="32" forecolor="#006699" fontSize="22.0" bold="true">
+					<expression><![CDATA[$F{total_products}]]></expression>
+				</element>
+				<element kind="staticText" uuid="ff63fa62-fccd-43da-b5a6-55fc75d2ffad" x="0" y="0" width="100" height="20" forecolor="#666666" fontSize="12.0">
+					<text><![CDATA[total_products]]></text>
+				</element>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group3">
+		<expression><![CDATA[$F{average_price}]]></expression>
+		<groupHeader>
+			<band height="32">
+				<element kind="textField" uuid="0e23af53-6021-4267-bb6b-ebd0c151666d" x="100" y="0" width="455" height="32" forecolor="#006699" fontSize="20.0" bold="true">
+					<expression><![CDATA[$F{average_price}]]></expression>
+				</element>
+				<element kind="staticText" uuid="ff346aaa-5462-4153-a04e-42e94bc08efd" x="0" y="0" width="100" height="20" forecolor="#666666" fontSize="12.0">
+					<text><![CDATA[average_price]]></text>
+				</element>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group4">
+		<expression><![CDATA[$F{max_price}]]></expression>
+		<groupHeader>
+			<band height="32">
+				<element kind="textField" uuid="ce0f844a-9d84-4011-abdc-8281d43c7b2d" x="100" y="0" width="455" height="32" forecolor="#006699" fontSize="16.0" bold="true">
+					<expression><![CDATA[$F{max_price}]]></expression>
+				</element>
+				<element kind="staticText" uuid="b66d267f-cb63-4994-85d0-ce3f9c4af131" x="0" y="0" width="100" height="20" forecolor="#666666" fontSize="12.0">
+					<text><![CDATA[max_price]]></text>
+				</element>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="min_price">
+		<expression><![CDATA[$F{min_price}]]></expression>
+	</group>
+	<background/>
+	<title height="72">
+		<element kind="frame" uuid="ea07287d-9133-4ce9-aed6-db3d614e5c27" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699">
+			<element kind="staticText" uuid="fec5ce37-3032-46c5-a434-6eb94968b81e" x="20" y="20" width="234" height="43" forecolor="#FFFFFF" fontSize="34.0" bold="true">
+				<text><![CDATA[TITLE]]></text>
+			</element>
+			<element kind="staticText" uuid="80bc1f3f-bc1f-4053-aaf8-31cfb23e5282" x="395" y="43" width="180" height="20" forecolor="#FFFFFF" fontSize="14.0" bold="false" hTextAlign="Right">
+				<text><![CDATA[Add a description here]]></text>
+			</element>
+		</element>
+	</title>
+	<pageHeader height="13"/>
+	<columnHeader height="21">
+		<element kind="line" uuid="620732ab-5147-4b8d-a8a9-96dea90d035b" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<element kind="line" uuid="3d3c33cc-645f-42ae-862f-da5278f6e388" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+		</band>
+	</detail>
+	<columnFooter/>
+	<pageFooter height="17">
+		<element kind="textField" uuid="acce5c8f-c10e-4416-bd9e-2ca4e398d9ba" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" hTextAlign="Right">
+			<expression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></expression>
+		</element>
+		<element kind="textField" uuid="e9beffdd-5094-4f21-ab2d-282439530f05" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" evaluationTime="Report">
+			<expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="1ec42432-b172-4f30-b587-579d49f034cf" x="0" y="4" width="100" height="13" pattern="EEEEE dd MMMMM yyyy">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</pageFooter>
+	<summary/>
+</jasperReport>

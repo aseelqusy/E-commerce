@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.ecommerce.controllers.CheckoutController"
+            stylesheets="@../styles/checkout.css" prefWidth="1000" prefHeight="600">
+
+    <top>
+        <HBox spacing="30" alignment="CENTER_LEFT" styleClass="navbar">
+            <Label text="cyber" styleClass="logo" />
+            <TextField fx:id="searchField" promptText="Search" styleClass="search-bar" />
+            <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
+
+            <HBox spacing="15" alignment="CENTER">
+                <Hyperlink text="Home" onAction="#goToHome"/>
+
+                <Hyperlink text="Products" onAction="#goToContact"/>
+
+                <Button text="❤" styleClass="icon-btn" />
+                <Button text="🛒" styleClass="icon-btn" onAction="#goToCart" />
+
+                <ImageView fx:id="userAvatar"
+                           fitWidth="32" fitHeight="32"
+                           preserveRatio="true"> </ImageView>
+                <MenuButton text="👤 Aseel Qadan" styleClass="profile-menu">
+                    <items>
+                        <MenuItem text="My Profile" />
+                        <MenuItem text="Settings" />
+                        <MenuItem text="Log Out" onAction="#handleLogout" />
+                    </items>
+                </MenuButton>
+            </HBox>
+        </HBox>
+    </top>
+
+    <center>
+
+        <FlowPane hgap="20" alignment="CENTER">
+        <VBox spacing="10" styleClass="box-left">
+            <Label text="Summary" styleClass="section-title"/>
+            <VBox spacing="20" alignment="CENTER">
+                <VBox spacing="10" styleClass="summary-item">
+                    <!-- منتج 1 -->
+                    <FlowPane hgap="15" alignment="CENTER_LEFT" styleClass="summary-item">
+
+
+                        <Label text="Apple iPhone 14 Pro Max 128Gb" styleClass="summary-item-label"/>
+
+                        <Label text="1399" styleClass="summary-item-price"/>
+                    </FlowPane>
+
+                    <!-- منتج 2 -->
+                    <FlowPane hgap="15" alignment="CENTER_LEFT" styleClass="summary-item">
+
+
+
+
+
+                        <Label text="AirPods Max Silver" styleClass="summary-item-label"/>
+
+                        <Label text="549" styleClass="summary-item-price"/>
+                    </FlowPane>
+
+                    <!-- منتج 3 -->
+                    <FlowPane hgap="15" alignment="CENTER_LEFT" styleClass="summary-item">
+
+
+                        <Label text="Apple Watch Series 9 GPS 41mm" styleClass="summary-item-label"/>
+
+                        <Label text="399" styleClass="summary-item-price"/>
+                    </FlowPane>
+                </VBox>
+                <Label text="Address" styleClass="section-title" />
+                <Label text="Palestine, Nablus, sufyan street"/>
+                <Label text="Shipment method" />
+                <Label text="Free"/>
+                <FlowPane hgap="20" alignment="CENTER_LEFT" prefWidth="300">
+                <Label text="Subtotal" />
+                <Label text="549" styleClass="summary-item-price"/>
+                </FlowPane>
+                <FlowPane hgap="20" alignment="CENTER_LEFT" prefWidth="300">
+                <Label text="Estimated Tax" />
+                <Label text="549" styleClass="summary-item-price"/>
+                </FlowPane>
+                <FlowPane hgap="20" alignment="CENTER_LEFT" prefWidth="300">
+                <Label text="Estimated shipping &amp; Handling" />
+                <Label text="549" styleClass="summary-item-price"/>
+                </FlowPane>
+                <FlowPane hgap="20" alignment="CENTER_LEFT" prefWidth="300">
+                <Label text="Total" />
+                <Label text="549" styleClass="summary-item-price"/>
+                </FlowPane>
+
+
+
+
+        </VBox>
+        </VBox>
+                <VBox spacing="10" styleClass="box-right">
+                    <Label text="Payment" styleClass="section-title"/>
+                    <FlowPane hgap="20" alignment="CENTER_LEFT" prefWidth="300">
+                        <Hyperlink text="Credit Card" styleClass="card-label"/>
+                        <Hyperlink text="PayPal" styleClass="inactive-label"/>
+                        <Hyperlink text="PayPal Credit" styleClass="inactive-label"/>
+                        </FlowPane>
+
+
+                        <TextField promptText="Cardholder Name"/>
+                        <TextField promptText="Card Number"/>
+                        <FlowPane>
+                            <TextField promptText="Exp. Date" />
+                            <TextField promptText="CVV" />
+                        </FlowPane>
+                        <CheckBox text="Same as billing address" selected="true"/>
+                        <FlowPane >
+                            <Button text="Back" styleClass="back-button"/>
+                            <Button text="Pay" styleClass="pay-button"/>
+                        </FlowPane>
+                </VBox>
+        </FlowPane>
+
+
+
+        </center>
+
+
+
+
+</BorderPane>

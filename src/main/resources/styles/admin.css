@@ -1,0 +1,115 @@
+.hbox {
+    -fx-background-color: #f8f8f8;
+    -fx-padding: 10;
+    -fx-spacing: 10;
+    -fx-border-color: #ddd;
+    -fx-border-width: 0 0 1 0;
+}
+
+.label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+.button {
+    -fx-background-color: #C2185B;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-padding: 6 14;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 3, 0, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: #e91e63;
+}
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 8;
+    -fx-table-cell-border-color: #eee;
+    -fx-padding: 8;
+    -fx-font-size: 13px;
+}
+.table-column {
+    -fx-alignment: CENTER_LEFT;
+}
+.search-field {
+    -fx-pref-width: 200;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: #ccc;
+    -fx-padding: 5 10;
+}
+.form-box {
+    -fx-background-color: #fefefe;
+    -fx-padding: 20;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: #ddd;
+    -fx-spacing: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0, 0, 2);
+}
+
+.form-title {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-text-fill: #444;
+}
+.dashboard-header {
+    -fx-background-color: linear-gradient(to right, #ffdde1, #ee9ca7);
+    -fx-border-color: #ccc;
+    -fx-border-width: 0 0 1 0;
+}
+
+.dashboard-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3b3b3b;
+}
+
+.logout-btn {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #d32f2f;
+    -fx-border-color: #d32f2f;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-padding: 6 14;
+    -fx-font-weight: bold;
+}
+
+.dashboard-body {
+    -fx-background-color: #fafafa;
+    -fx-padding: 40;
+}
+
+.dashboard-welcome {
+    -fx-font-size: 20px;
+    -fx-text-fill: #666;
+    -fx-font-weight: bold;
+}
+
+.dashboard-button {
+    -fx-background-color: #C2185B;
+    -fx-text-fill: white;
+    -fx-background-radius: 30;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.dashboard-button:hover {
+    -fx-background-color: #e91e63;
+}
+
+.dashboard-desc {
+    -fx-font-size: 12px;
+    -fx-text-fill: #888;
+}
+
+.button {
+    -fx-background-color: #C2185B;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-font-weight: bold;
+}

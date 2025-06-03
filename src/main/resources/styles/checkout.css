@@ -1,0 +1,238 @@
+.root {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-background-color: #f9f9f9;
+}
+
+.navbar {
+    -fx-background-color: #fbd5ec;
+    -fx-padding: 15px 40px;
+}
+
+.logo {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+
+.search-bar {
+    -fx-background-radius: 30;
+    -fx-pref-width: 200px;
+    -fx-font-size: 13px;
+}
+
+.icon-btn {
+    -fx-background-color: transparent;
+    -fx-font-size: 18px;
+    -fx-cursor: hand;
+}
+
+.profile-menu {
+    -fx-background-color: #fff0f5;
+    -fx-text-fill: #444;
+    -fx-font-size: 14px;
+    -fx-background-radius: 20;
+    -fx-padding: 6 12;
+    -fx-border-radius: 20;
+    -fx-border-color: #ccc;
+}
+.hero-section {
+    -fx-background-color: transparent;
+}
+
+.hero-title {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E91E63;
+}
+
+.hero-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff;
+}
+
+.hero-description {
+    -fx-font-size: 13px;
+    -fx-text-fill: #ffffff;
+}
+
+.hero-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20px;
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+}
+
+
+
+
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.summary-panel {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1px;
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+}
+
+.payment-panel {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1px;
+}
+
+.total-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-text-fill: #444;
+}
+
+.total-amount {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000;
+}
+
+.pay-button {
+    -fx-background-color: #000000;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 10 20 10 20;
+}
+
+.back-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #888;
+    -fx-border-width: 1;
+    -fx-background-radius: 5;
+    -fx-padding: 10 20 10 20;
+}
+.box-left, .box-right {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 2);
+    -fx-pref-width: 400;
+}
+.box-left {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0.1, 0, 2);
+    -fx-pref-width: 400;
+}
+
+.summary-item {
+    -fx-background-color: #f9f9f9;
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-spacing: 5;
+}
+
+.summary-item-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+.summary-item-price {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000;
+}
+
+.summary-total-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+.summary-total-amount {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000;
+}
+
+.box-right {
+    -fx-background-color: #fffaf0;
+    -fx-padding: 20;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0.1, 0, 2);
+    -fx-pref-width: 400;
+}
+.summary-item {
+    -fx-background-color: #f5f5f5;
+    -fx-background-radius: 12;
+    -fx-padding: 10;
+    -fx-spacing: 15;
+}
+
+.summary-item-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #111;
+}
+
+.summary-item-price {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000;
+}
+.card-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: black;
+    -fx-underline: true;
+}
+.inactive-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #888888; /* أو استخدم grey */
+    -fx-font-weight: normal;
+    -fx-underline: false;
+}
+.card-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-underline: true;
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+}
+
+.inactive-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #888;
+    -fx-underline: false;
+    -fx-cursor: hand;
+}
+
+.back-button {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-padding: 10 25;
+    -fx-background-radius: 46;
+    -fx-margin-right: 10;
+}
+
+.pay-button {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-padding: 10 25;
+    -fx-background-radius: 6;
+    -fx-margin-left: 10;
+}
+
+

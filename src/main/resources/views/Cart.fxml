@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.ecommerce.controllers.CartController"
+            fx:id="cartPane"
+            prefWidth="1200" prefHeight="800"
+            stylesheets="@../styles/Cart.css">
+
+    <!-- 🔝 Top Navbar -->
+    <top>
+        <HBox spacing="30" alignment="CENTER_LEFT" styleClass="navbar">
+            <Label text="cyber" styleClass="logo" />
+            <TextField fx:id="searchField" promptText="Search" styleClass="search-bar" />
+            <Region HBox.hgrow="ALWAYS" />
+            <HBox spacing="15" alignment="CENTER">
+                <Hyperlink text="Home" onAction="#goToHome"/>
+                <Hyperlink text="Products" onAction="#goToProducts"/>
+                <Button text="❤" styleClass="icon-btn" />
+                <Button text="🛒" styleClass="icon-btn" onAction="#goToCart" />
+                <ImageView fx:id="userAvatar" fitWidth="32" fitHeight="32" preserveRatio="true"/>
+                <MenuButton fx:id="profileMenu" text="👤 Waleed " styleClass="profile-menu">
+                    <items>
+                        <MenuItem text="My Profile" />
+                        <MenuItem text="Settings" />
+                        <MenuItem text="Log Out" onAction="#handleLogout" />
+                    </items>
+                </MenuButton>
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- 🛒 Center (Cart Content + Order Summary) -->
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+            <VBox spacing="30" alignment="TOP_CENTER">
+                <padding>
+                    <Insets top="20" right="20" bottom="20" left="20"/>
+                </padding>
+
+                <HBox spacing="30" alignment="TOP_CENTER">
+
+                    <!-- 🧾 Cart Left Side -->
+                    <VBox spacing="20" styleClass="cart-left" prefWidth="750">
+                        <Label text="Shopping Cart" styleClass="section-title" />
+
+                        <!-- ✅ Dynamic Cart Items will go here -->
+                        <VBox fx:id="cartItemsBox" spacing="15" />
+
+                        <!-- 📍 Address -->
+                        <Label text="Select Address" styleClass="section-title" />
+                        <VBox spacing="15">
+                            <fx:define>
+                                <ToggleGroup fx:id="addressToggle" />
+                            </fx:define>
+                            <VBox spacing="10" styleClass="address-box">
+                                <RadioButton text="Nablus" toggleGroup="$addressToggle" selected="true" />
+                                <Label text="Rafidia – near Al-Ittihad Hospital" />
+                                <Label text=" +970599123456 " />
+                            </VBox>
+                            <VBox spacing="10" styleClass="address-box">
+                                <RadioButton text="Ramallah" toggleGroup="$addressToggle" />
+                                <Label text=" Al-Masyoun – Irsal Street – Saada Building " />
+                                <Label text="+970568987654  " />
+                            </VBox>
+                        </VBox>
+
+                        <!-- 🔙 Navigation -->
+                        <HBox spacing="10" alignment="CENTER_RIGHT">
+                            <Button fx:id="backBtn" text="← Back" styleClass="form-btn" onAction="#goToProducts"/>
+                            <Button fx:id="nextBtn" text="Next →" styleClass="form-btn" onAction="#goToShipping"/>
+                        </HBox>
+                    </VBox>
+
+                    <!-- 💳 Order Summary -->
+                    <VBox spacing="20" alignment="TOP_LEFT" prefWidth="380" styleClass="order-summary">
+                        <Label text="Order Summary" styleClass="section-title" />
+                        <TextField fx:id="discountField" promptText="Discount code / Promo code" />
+                        <HBox spacing="5">
+                            <TextField fx:id="bonusCardField" promptText="Your bonus card number" />
+                            <Button fx:id="applyBtn" text="Apply" styleClass="form-btn" />
+                        </HBox>
+                        <Separator />
+                        <VBox spacing="5">
+                            <Label fx:id="subtotalLabel" text="Subtotal: $0.00" />
+                            <Label fx:id="taxLabel" text="Estimated Tax: $0.00" />
+                            <Label fx:id="shippingLabel" text="Shipping: $0.00" />
+                            <Label fx:id="totalLabel" text="Total: $0.00" styleClass="total-price" />
+                        </VBox>
+                        <Button fx:id="checkoutBtn" text="Checkout" styleClass="checkout-btn" />
+                        <HBox spacing="20" alignment="CENTER">
+                            <Label text="● Step 1 Address" styleClass="step-active" />
+                            <Label text="○ Step 2 Shipping" />
+                            <Label text="○ Step 3 Payment" />
+                        </HBox>
+                    </VBox>
+                </HBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

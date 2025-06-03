@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.ecommerce.controllers.OrdersController"
+            prefWidth="1200" prefHeight="700"
+            stylesheets="@/styles/admin.css">
+
+    <!-- Top Bar -->
+    <top>
+        <HBox styleClass="dashboard-header hbox" spacing="20" alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="15" right="20" bottom="15" left="20"/>
+            </padding>
+            <Button text="Back" onAction="#goBack" styleClass="button"/>
+            <Label text="🛒 View Orders" styleClass="dashboard-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="searchField" promptText="Search..." styleClass="search-field"/>
+        </HBox>
+    </top>
+</BorderPane>

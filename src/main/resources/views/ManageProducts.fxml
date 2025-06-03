@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.ecommerce.controllers.AdminProductController"
+            prefWidth="1200" prefHeight="700"
+            stylesheets="@/styles/admin.css">
+
+    <!-- 🔝 Top Bar -->
+    <top>
+        <HBox spacing="20" alignment="CENTER_LEFT" styleClass="dashboard-header">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Button text="Back" onAction="#goBack" />
+            <Label text="📦 Manage Products" styleClass="dashboard-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="searchField" promptText="Search..." />
+            <Button text="Search" onAction="#handleSearch"/>
+            <Button text="Add" onAction="#handleAdd"/>
+            <Button text="Edit" onAction="#handleEdit"/>
+            <Button text="Delete" onAction="#handleDelete"/>
+            <Button text="Refresh" onAction="#handleRefresh"/>
+        </HBox>
+    </top>
+
+    <!-- 📦 Main Content -->
+    <center>
+        <VBox spacing="15">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Product Table -->
+            <TableView fx:id="productTable" prefHeight="350">
+                <columns>
+                    <TableColumn fx:id="idCol" text="ID" prefWidth="50" />
+                    <TableColumn fx:id="nameCol" text="Name" prefWidth="150" />
+                    <TableColumn fx:id="descCol" text="Description" prefWidth="200" />
+                    <TableColumn fx:id="priceCol" text="Price" prefWidth="80" />
+                    <TableColumn fx:id="qtyCol" text="Quantity" prefWidth="80" />
+                    <TableColumn fx:id="categoryCol" text="Category" prefWidth="100" />
+                    <TableColumn fx:id="brandCol" text="Brand" prefWidth="100" />
+                    <TableColumn fx:id="genreCol" text="Genre" prefWidth="100" />
+                </columns>
+            </TableView>
+
+            <!-- Product Form -->
+            <VBox fx:id="formContainer" spacing="10" visible="false" managed="false" alignment="CENTER" styleClass="form-box">
+                <Label fx:id="formTitle" styleClass="form-title" />
+
+                <TextField fx:id="nameField" promptText="Product Name" />
+                <TextArea fx:id="descField" promptText="Description" prefRowCount="3" wrapText="true" />
+                <TextField fx:id="imagePathField" promptText="Image Path (e.g. product.png)" />
+                <TextField fx:id="priceField" promptText="Price" />
+                <TextField fx:id="quantityField" promptText="Quantity" />
+                <TextField fx:id="categoryField" promptText="Category" />
+                <TextField fx:id="brandField" promptText="Brand" />
+                <TextField fx:id="genreField" promptText="Genre" />
+
+                <HBox spacing="10">
+                    <Button fx:id="saveButton" text="💾 Save" onAction="#handleSave" />
+                    <Button fx:id="cancelButton" text="❌ Cancel" onAction="#handleCancel" />
+                </HBox>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

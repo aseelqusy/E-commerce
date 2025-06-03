@@ -1,0 +1,33 @@
+.login-left {
+  -fx-background-color: #ffeaf5;
+  -fx-padding: 80px;
+}
+
+.title {
+  -fx-font-size: 28px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #C2185B;
+}
+
+.welcome-label {
+  -fx-font-size: 16px;
+  -fx-text-fill: #888;
+}
+
+.input-field {
+  -fx-pref-width: 280px;
+  -fx-font-size: 14px;
+  -fx-background-radius: 8px;
+  -fx-background-color: #f8d2e3;
+  -fx-text-fill: #333;
+  -fx-border-color: transparent;
+}
+
+.login-button {
+  -fx-background-color: #C2185B;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+  -fx-font-size: 14px;
+  -fx-background-radius: 30px;
+  -fx-padding: 8px 16px;
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.ecommerce.controllers.ProductsController"
+            prefWidth="1280" prefHeight="720"
+            stylesheets="@/styles/products.css">
+
+    <top>
+
+            <HBox spacing="0" alignment="CENTER_LEFT" styleClass="navbar">
+                <Button text="← Back" onAction="#goBack" styleClass="back-btn" />
+                <Label fx:id="categoryTitle" styleClass="category-title" text="Category" />
+                <Region HBox.hgrow="ALWAYS" />
+
+
+
+
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10" />
+                </padding>
+
+                <TextField fx:id="searchField" styleClass="search-field" promptText="Search products..." />
+                <ComboBox fx:id="filterTypeCombo" promptText="Filter by..." styleClass="filter-type-combo" />
+
+                <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
+                <MenuButton  fx:id="profileMenu" text="👤 Waleed" styleClass="profile-menu">
+                    <items>
+                        <MenuItem text="My Profile" />
+                        <MenuItem text="Settings" />
+                        <MenuItem text="Log Out" onAction="#handleLogout" />
+                    </items>
+                </MenuButton>
+
+            </HBox>
+
+    </top>
+    <left>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20" />
+            </padding>
+            <Label text="Filter by Brand" style="-fx-font-weight: bold; -fx-font-size: 16;" />
+            <TextField fx:id="brandSearchField" promptText="Search brand..." onKeyReleased="#filterBrandList" />
+            <VBox fx:id="brandFilterBox" spacing="5" />
+        </VBox>
+    </left>
+    <center>
+        <VBox spacing="20" alignment="CENTER">
+            <ScrollPane fitToWidth="true">
+                <FlowPane fx:id="productsFlowPane" alignment="CENTER" hgap="20" vgap="20">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20" />
+                    </padding>
+                </FlowPane>
+            </ScrollPane>
+        </VBox>
+    </center>
+
+</BorderPane>

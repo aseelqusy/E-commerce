@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.ecommerce.controllers.ManageUsersController"
+            prefWidth="1000" prefHeight="600"
+            stylesheets="@/styles/admin.css">
+
+    <top>
+        <HBox spacing="20" alignment="CENTER_LEFT" styleClass="dashboard-header">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Button text="Back" onAction="#goBack" />
+            <Label text="👥 Manage Users" styleClass="dashboard-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="searchField" promptText="Search by email..." />
+            <Button text="Search" onAction="#handleSearch"/>
+
+        </HBox>
+    </top>
+
+    <center>
+        <VBox>
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <TableView fx:id="userTable" prefHeight="500">
+                <columns>
+                    <TableColumn fx:id="idCol" text="ID" prefWidth="50"/>
+                    <TableColumn fx:id="nameCol" text="Name" prefWidth="150"/>
+                    <TableColumn fx:id="emailCol" text="Email" prefWidth="200"/>
+                    <TableColumn fx:id="roleCol" text="Role" prefWidth="100"/>
+                    <TableColumn fx:id="actionsCol" text="Actions" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

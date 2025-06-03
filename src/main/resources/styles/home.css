@@ -1,0 +1,98 @@
+
+.navbar {
+    -fx-background-color: #fbd5ec;
+    -fx-padding: 15px 40px;
+}
+
+.logo {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+
+.search-bar {
+    -fx-background-radius: 30;
+    -fx-pref-width: 200px;
+    -fx-font-size: 13px;
+}
+
+.icon-btn {
+    -fx-background-color: transparent;
+    -fx-font-size: 18px;
+    -fx-cursor: hand;
+}
+
+
+.hero-section {
+    -fx-background-color: transparent;
+}
+
+.hero-title {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E91E63;
+}
+
+.hero-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff;
+}
+
+.hero-description {
+    -fx-font-size: 13px;
+    -fx-text-fill: #ffffff;
+}
+
+.hero-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20px;
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+}
+.category-section {
+    -fx-background-color: #fff0f5;
+    -fx-padding: 50px 0;
+}
+
+.category-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ff4d4d;
+
+}
+
+.category-btn {
+    -fx-background-color: #f8bad5;
+    -fx-text-fill: #000;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20px;
+    -fx-padding: 10px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0.3, 0, 3);
+    -fx-cursor: hand;
+}
+
+.category-btn:hover {
+    -fx-background-color: #f06292;
+    -fx-text-fill: white;
+}
+.profile-menu {
+    -fx-background-color: #fff0f5;
+    -fx-text-fill: #444;
+    -fx-font-size: 14px;
+    -fx-background-radius: 20;
+    -fx-padding: 6 12;
+    -fx-border-radius: 20;
+    -fx-border-color: #ccc;
+}
+
+.profile-menu:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: #ff4d4d;
+}
+
+.user-avatar {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 3, 0, 0, 1);
+
+}

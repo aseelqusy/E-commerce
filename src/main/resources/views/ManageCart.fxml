@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.ecommerce.controllers.ManageCartController"
+            prefWidth="1000" prefHeight="600"
+            stylesheets="@../styles/admin.css">
+
+    <top>
+        <HBox spacing="20" alignment="CENTER_LEFT" styleClass="dashboard-header">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Button text="Back" onAction="#goBack" />
+            <Label text="🛒 Manage Cart Items" styleClass="dashboard-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="searchField" promptText="Search..." />
+            <Button text="Search" onAction="#handleSearch"/>
+
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <!-- 👤 ComboBox يظهر فقط إذا كنت Admin -->
+            <ComboBox fx:id="userSelector" promptText="Select User..." prefWidth="300" onAction="#handleUserSelect"/>
+
+            <TableView fx:id="cartTable" prefHeight="500">
+                <columns>
+                    <TableColumn fx:id="idCol" text="Cart ID" prefWidth="80"/>
+                    <TableColumn fx:id="userIdCol" text="User ID" prefWidth="100"/>
+                    <TableColumn fx:id="productNameCol" text="Product Name" prefWidth="200"/>
+                    <TableColumn fx:id="priceCol" text="Price ($)" prefWidth="100"/>
+                    <TableColumn fx:id="quantityCol" text="Quantity" prefWidth="80"/>
+                    <TableColumn fx:id="actionsCol" text="Actions" prefWidth="120"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

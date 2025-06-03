@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.ecommerce.controllers.AdminDashboardController"
+            prefWidth="1000" prefHeight="600"
+            stylesheets="@/styles/admin.css">
+
+    <top>
+        <HBox spacing="20" alignment="CENTER_LEFT" styleClass="dashboard-header">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="🛠️ Admin Dashboard" styleClass="dashboard-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="🔓 Logout" onAction="#handleLogout" />
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="25">
+            <Button text="📦 Manage Products" onAction="#openManageProducts" prefWidth="300" />
+            <Button text="👥 Manage Users" onAction="#openManageUsers" prefWidth="300" />
+            <Button text="Generate Report" onAction="#onGenerateReport"/>
+            <Button text="🛒 Manage Orders" onAction="#openOrders" prefWidth="300" />
+            <Button text="🏠 Go to Home Page" onAction="#openHomePage" prefWidth="300"/>
+            <Button text="🛍 Go to Products" onAction="#openProductsPage" prefWidth="300"/>
+
+            <Button text="🧺 Manage Cart" onAction="#openCartItems" prefWidth="300"/>
+
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.ecommerce.controllers.ShippingController"
+            prefWidth="1200" prefHeight="800"
+            stylesheets="@../styles/Cart.css">
+
+    <!-- 🔝 Top Navbar -->
+    <top>
+        <HBox spacing="30" alignment="CENTER_LEFT" styleClass="navbar">
+            <Label text="cyber" styleClass="logo" />
+
+            <Region HBox.hgrow="ALWAYS" />
+            <HBox spacing="15" alignment="CENTER">
+                <Hyperlink text="Home" onAction="#goToHome"/>
+                <Hyperlink text="Products" onAction="#goToProducts"/>
+                <Button text="❤" styleClass="icon-btn" />
+                <Button text="🛒" styleClass="icon-btn" onAction="#goToCart" />
+                <MenuButton fx:id="profileMenu" text="👤 Waleed" styleClass="profile-menu">
+                    <items>
+                        <MenuItem text="My Profile" />
+                        <MenuItem text="Settings" />
+                        <MenuItem text="Log Out" onAction="#handleLogout" />
+                    </items>
+                </MenuButton>
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- 📦 Center -->
+    <center>
+        <VBox spacing="30" alignment="TOP_CENTER">
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+
+            <Label text="Shipping Information" styleClass="section-title" />
+
+            <VBox spacing="15" styleClass="shipping-form" maxWidth="600">
+                <TextField fx:id="fullNameField" promptText="Full Name" />
+                <TextField fx:id="phoneField" promptText="Phone Number" />
+                <TextField fx:id="addressField" promptText="Full Address" />
+                <ComboBox fx:id="shippingMethodCombo" promptText="Shipping Method" prefWidth="300"/>
+            </VBox>
+
+            <HBox spacing="20" alignment="CENTER_RIGHT">
+                <Button fx:id="backBtn" text="← Back" onAction="#goToCart" styleClass="form-btn"/>
+                <Button fx:id="nextBtn" text="Next →" onAction="#goToPayment" styleClass="form-btn"/>
+            </HBox>
+
+        </VBox>
+    </center>
+</BorderPane>
